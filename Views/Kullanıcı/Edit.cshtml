@@ -1,0 +1,33 @@
+@model Kullanıcı
+
+<h2>Kullanıcı Güncelleme</h2>
+<hr>
+
+<div class="row">
+    <div class="col-8">
+        <form asp-controller="Kullanıcı" asp-action="Edit" method="post">
+            <input type="hidden" asp-for="KullanıcıId">
+            <div class="mb-3">
+                <label asp-for="KullanıcıAd" class="form-label">Kullanıcı Adı</label>
+                <input asp-for="KullanıcıAd" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label asp-for="KullanıcıSoyad" class="form-label">Kullanıcı Soyad</label>
+                <input asp-for="KullanıcıSoyad" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label asp-for="Eposta" class="form-label">Eposta</label>
+                <input asp-for="Eposta" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label asp-for="Telefon" class="form-label">Telefon</label>
+                <input asp-for="Telefon" class="form-control">
+            </div>
+        
+            <button type="submit" class="btn btn-secondary">Kaydet</button>
+        
+        </form>
+    </div>
+    
+    </div>
+</div>

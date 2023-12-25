@@ -1,0 +1,48 @@
+﻿@model List<Tarif>
+     <div class="container">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <a href="@Url.Action("Details", "Tarif", new { id = Model[0].Id })">
+                    <img src="~/İmg/1.jpg" class="d-block w-100" alt="Slider 1">
+                </a>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <a href="@Url.Action("Details", "Tarif", new { id = Model[1].Id })">
+                    <img src="~/İmg/9.jpg" class="d-block w-100" alt="Slider 2">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="@Url.Action("Details", "Tarif", new { id = Model[2].Id })">
+                    <img src="~/İmg/8.jpg" class="d-block w-100" alt="Slider 3">
+                </a>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+<div class="row">
+    @foreach(var yemek in Model){
+        @if(yemek.isHome && yemek.isActive){
+        <div class="col-3">
+            <div class="card">
+                <img src="~/İmg/@yemek.Image" alt="My Image">
+                <div class="card-body" style="height: 250px;">
+                    <h5 class="card-title">@yemek.Title</h5>
+                    <p class="card-text">@yemek.Description</p>
+                    <a class="btn btn-danger" asp-controller="Tarif" asp-action="Details" asp-route-id="@yemek.Id">Detay</a>
+                </div>
+                </div>
+            
+        </div>
+        }
+    }
+            </div>
+          

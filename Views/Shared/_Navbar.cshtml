@@ -1,0 +1,31 @@
+﻿
+    <nav class="navbar navbar-expand-sm navbar-dark bg-danger">
+        <div class="container">
+            <img src="~/İmg/logo.png" width="80px" height="80px" alt="logo">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index" class="nav-link">İtalian Cuisine</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <form class="form-inline mx-auto"> <!-- mx-auto ile ortaya hizalama -->
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                </form>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a asp-controller="Home" asp-area="" asp-action="Index" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Tarif" asp-area="" asp-action="List" class="nav-link">Recipe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Create" asp-area="" asp-action="Index" class="nav-link">Premium</a>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+        </div>
+    </nav>
+

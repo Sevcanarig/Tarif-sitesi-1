@@ -1,0 +1,25 @@
+@model Tarif
+    <div class="card-container">
+        <div class="row">
+            
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="~/İmg/@Model.Image" alt="My Image">
+                
+                <div class="card-body">
+                    <h5 class="card-title">@Model.Title</h5>
+                    <p class="card-text">@Model.Description</p>
+                    <a class="btn btn-danger" asp-controller="Tarif" asp-action="Details" asp-route-id="@Model.Id">Detay</a>
+                </div>
+                </div>
+            </div>
+        </div>
+
+          
+
+
+
+
+
+
+

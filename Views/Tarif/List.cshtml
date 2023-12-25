@@ -1,0 +1,7 @@
+@model List<Tarif>
+
+@foreach (var yemek in Model){
+    if(yemek.isActive){
+    @await Html.PartialAsync("_List", yemek)   
+}
+}
